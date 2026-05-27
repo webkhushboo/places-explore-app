@@ -10,6 +10,13 @@ const Users = () => {
       image:
         'https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       places: 3
+    },
+    {
+      id: 'u2',
+      name: 'Manuel Schwarzmüller',
+      image:
+        'https://images.pexels.com/photos/2884116/pexels-photo-2884116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      places: 1
     }
   ];
 
