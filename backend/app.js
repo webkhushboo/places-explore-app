@@ -1,22 +1,20 @@
-// const fs = require('fs');
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((req, res) => {
-  console.log('Incoming request');
-  console.log(req.method, req.url);
+const app = express();
 
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>Success</h1>');
+app.use((req, res, next) => {
+  let body = '';
+  req.on('end', () => {
+    const userName = body.split('=');
+    req.body = { name: userName}
+    next();
+  
+  });
 });
 
-server.listen(5001);
+app.use((req, res, next) => {
+  res.send('<h1>Hello from Express!</h1>');
+});
 
-// const name = 'Khushboo';
 
-// fs.writeFile('user-data.txt', "Name: " + name, (err) => {
-//   if (err) {    
-//     console.log(err);
-//   } else {
-//     console.log('File written successfully');
-//   }
-// });
+app.listen(5001);
