@@ -6,42 +6,40 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-right: 2rem;
   cursor: pointer;
-  padding: 0;
-  margin-right: 1rem;
 }
 
 .main-navigation__menu-btn span {
   display: block;
   width: 3rem;
   height: 2.5px;
-  background: #292929;
+  background: white;
 }
 
 .main-navigation__title {
-  color: #292929;
-  margin: 0;
-  font-size: 1.5rem;
+  color: white;
 }
 
 .main-navigation__title a {
-  color: inherit;
   text-decoration: none;
+  color: white;
 }
 
-.main-header nav {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
+.main-navigation__header-nav {
+  display: none;
 }
 
-.main-header nav .nav-links {
-  width: auto;
-  justify-content: flex-end;
+.main-navigation__drawer-nav {
+  height: 100%;
 }
 
 @media (min-width: 768px) {
   .main-navigation__menu-btn {
     display: none;
+  }
+
+  .main-navigation__header-nav {
+    display: block;
   }
 }
